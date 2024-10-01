@@ -6,23 +6,22 @@ def imprime(i)
   puts "Olá Mundo - #{i}"
 end
 
-# threads = []
+threads = []
 
-# puts "Criando Threads.."
+puts "Criando Threads.."
 
-# (0..9).each do |a|
-#   thread = Thread.new { imprime(a) }
-#   threads << thread
-# end
+(0..9).each do |a|
+  thread = Thread.new { imprime(a) }
+  threads << thread
+end
 
-# threads.each(&:join)
+threads.each(&:join)
 
-puts "Iniciando processo"
-i = 0
-t1 = Thread.new { imprime(i) }
+#puts "Iniciando processo"
+#i = 0
+#t1 = Thread.new { imprime(i) }
 
-t1.join
+#t1.join
 
 print "Finalizando o processo!\n"
 
-end
